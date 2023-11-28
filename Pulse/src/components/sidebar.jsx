@@ -1,13 +1,6 @@
 import { Link } from 'react-router-dom';
-import { useState } from 'react';
 
-const Sidebar = ({ playlists, handleAddPlaylist }) => {
-  const [newPlaylistName, setNewPlaylistName] = useState('');
-
-  const handleAdd = () => {
-    handleAddPlaylist(newPlaylistName);
-    setNewPlaylistName('');
-  };
+const Sidebar = () => {
 
   return (
     <div className="sidebar bg-gray-800 bg-opacity-[20%] h-screen text-white w-1/6">
@@ -20,30 +13,12 @@ const Sidebar = ({ playlists, handleAddPlaylist }) => {
           </li>
           <li className="p-4">
             <h2>Playlists</h2>
-
             <ul>
-              {playlists.map((playlist) => (
-                <li key={playlist.id} className="p-2">
-                  <Link to={`/playlist/${playlist.id}`} className="hover:text-gray-300">
-                    {playlist.name}
-                  </Link>
-                </li>
-              ))}
+              {/* placeholder for playlist create component */}
             </ul>
           </li>
           <li className="p-4">
-            <div>
-              <input
-                type="text"
-                placeholder="New Playlist"
-                value={newPlaylistName}
-                onChange={(e) => setNewPlaylistName(e.target.value)}
-                className="p-2"
-              />
-              <button onClick={handleAdd} className="p-2 bg-green-500 text-white rounded">
-                Add Playlist
-              </button>
-            </div>
+            {/* placeholder for playlist create component */}
           </li>
         </ul>
       </nav>

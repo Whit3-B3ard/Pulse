@@ -1,14 +1,52 @@
 import ArtistCard from "./artistCard";
+import Slider from 'react-slick';
+
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
 
 
 const RowCarouselArtist = ({ items }) => {
+  const settings = {
+    dots: false,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 8,
+    slidesToScroll: 1,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 3,
+        },
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 2,
+        },
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+        },
+      },
+    ],
+    arrows: false, // Hide default arrows
+  };
+
   return (
-    <div className="flex overflow-x-auto space-x-4 p-4">
+    <Slider {...settings}>
       {items.map((item) => (
-        <ArtistCard key={item.id} {...item} onClick={() => console.log(`Play ${item.title}`)} />
+        <div key={item.id} className="px-2">
+          <ArtistCard key={item.id} {...item} onClick={() => console.log(`Play ${item.title}`)} />
+        </div>
       ))}
-    </div>
+    </Slider>
   );
 };
 
 export default RowCarouselArtist;
+
+  
+

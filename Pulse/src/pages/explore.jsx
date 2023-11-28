@@ -34,9 +34,9 @@ const SongCard = ({ title, artist, year, image, onClick }) => {
             
         </div>
         <blockquote className="p-1 pt-[10px]">
-                <h3 className="text-lg font-semibold text-gray-600 mb-2">{title}</h3>
-                <p className="text-sm text-gray-600 mb-2">{`${artist} • ${year}`}</p>
-            </blockquote>
+          <h3 className="text-lg font-semibold text-gray-600 mb-2">{title}</h3>
+          <p className="text-sm text-gray-600 mb-2">{`${artist} • ${year}`}</p>
+        </blockquote>
       </div>
     );
 };
@@ -52,35 +52,36 @@ const SongList = ({ songs, onSongClick }) => {
 };
 
 const Explore = () => {
-  const [currentSong, setCurrentSong] = useState(null);
-  const [filteredSongs, setFilteredSongs] = useState(null);
+    const [currentSong, setCurrentSong] = useState(null);
+    const [filteredSongs, setFilteredSongs] = useState(null);
 
-  const handleSongClick = (song) => {
-    setCurrentSong(song);
-  };
+    const handleSongClick = (song) => {
+      setCurrentSong(song);
+    };
 
-  const handleSearch = (searchTerm) => {
-    // Filter songs based on the search term
-    const filtered = songsData.filter(
-      (song) =>
-        song.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        song.artist.toLowerCase().includes(searchTerm.toLowerCase())
+    const handleSearch = (searchTerm) => {
+      // Filter songs based on the search term
+      const filtered = songsData.filter(
+        (song) =>
+          song.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+          song.artist.toLowerCase().includes(searchTerm.toLowerCase())
+      );
+
+      // Update the filtered songs
+      setFilteredSongs(filtered);
+    };
+
+    return (
+      <div className="p-[60px]">
+        <h2 className="text-[28px] pb-8 font-bold text-white">Browse all</h2>
+
+        <SearchBar onSearch={handleSearch} />
+        <SongList songs={filteredSongs || songsData} onSongClick={handleSongClick} />
+        {currentSong && <Playback audioSrc={currentSong.audio} currentSong={currentSong} />}
+        <PulsePlaylist />
+        <PulseTopArtists />
+      </div>
     );
-
-    // Update the filtered songs
-    setFilteredSongs(filtered);
-  };
-
-  return (
-    <div className="p-8">
-      <h2 className="text-[28px] pb-8 font-bold text-white">Browse all</h2>
-      <SearchBar onSearch={handleSearch} />
-      <SongList songs={filteredSongs || songsData} onSongClick={handleSongClick} />
-      {currentSong && <Playback audioSrc={currentSong.audio} currentSong={currentSong} />}
-      <PulsePlaylist />
-      <PulseTopArtists />
-    </div>
-  );
 };
 
 export default Explore;
