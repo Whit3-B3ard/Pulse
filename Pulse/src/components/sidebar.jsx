@@ -10,7 +10,7 @@ const Sidebar = ({ playlists, handleAddPlaylist }) => {
   };
 
   return (
-    <div className="sidebar bg-gray-700 h-screen text-white w-1/6">
+    <div className="sidebar bg-gray-800 bg-opacity-[20%] h-screen text-white w-1/6">
       <nav>
         <ul>
           <li className="p-4">

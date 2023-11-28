@@ -1,4 +1,3 @@
-import React from 'react';
 import RowCarousel from './rowCarousel'; 
 
 const PulsePlaylist = () => {

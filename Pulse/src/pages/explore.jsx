@@ -2,10 +2,13 @@ import { useState } from 'react';
 import songsData from '../data/songs.json'
 import Playback from '../components/playback';
 import PulsePlaylist from '../components/pulseMostListened';
+import PulseTopArtists from '../components/pulseTopArtists';
+import SearchBar from '../components/searchBar';
 
-const SongCard = ({ title, artist, year, genre, image, onClick }) => {
+const SongCard = ({ title, artist, year, image, onClick }) => {
     return (
-        <div onClick={onClick} className="bg-black rounded-[5px] overflow-hidden shadow-md w-[190px] p-[15px] cursor-pointer transition-transform transform hover:scale-105">
+      <div className="flex flex-col">
+        <div onClick={onClick} className="bg-gray-800 bg-opacity-[20%] rounded-[5px] overflow-hidden shadow-md w-[190px] p-[15px] cursor-pointer transition-transform transform hover:scale-105">
             <img src={image} alt={artist} className="w-full h-[150px] object-cover rounded-[5px]" />
             <div className="absolute inset-0 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity">
         <button
@@ -28,12 +31,13 @@ const SongCard = ({ title, artist, year, genre, image, onClick }) => {
           </svg>
         </button>
       </div>
-            <div className="p-1">
+            
+        </div>
+        <blockquote className="p-1 pt-[10px]">
                 <h3 className="text-lg font-semibold text-gray-600 mb-2">{title}</h3>
                 <p className="text-sm text-gray-600 mb-2">{`${artist} • ${year}`}</p>
-                <p className="text-sm text-gray-600">{`Genre: ${genre}`}</p>
-            </div>
-        </div>
+            </blockquote>
+      </div>
     );
 };
 
@@ -48,23 +52,35 @@ const SongList = ({ songs, onSongClick }) => {
 };
 
 const Explore = () => {
-    const [currentSong, setCurrentSong] = useState(null);
-  
-    const handleSongClick = (song) => {
-      // Update the current song when a song is clicked
-      setCurrentSong(song);
-    };
-  
-    return (
-      <div className="p-8">
-        <h2 className="text-[28px] pb-8 font-bold text-white">Browse all</h2>
-        <SongList songs={songsData} onSongClick={handleSongClick} />
-            {currentSong && (
-                <Playback audioSrc={currentSong.audio} currentSong={currentSong} />
-            )}
-        <PulsePlaylist />
-      </div>
-    );
+  const [currentSong, setCurrentSong] = useState(null);
+  const [filteredSongs, setFilteredSongs] = useState(null);
+
+  const handleSongClick = (song) => {
+    setCurrentSong(song);
   };
+
+  const handleSearch = (searchTerm) => {
+    // Filter songs based on the search term
+    const filtered = songsData.filter(
+      (song) =>
+        song.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+        song.artist.toLowerCase().includes(searchTerm.toLowerCase())
+    );
+
+    // Update the filtered songs
+    setFilteredSongs(filtered);
+  };
+
+  return (
+    <div className="p-8">
+      <h2 className="text-[28px] pb-8 font-bold text-white">Browse all</h2>
+      <SearchBar onSearch={handleSearch} />
+      <SongList songs={filteredSongs || songsData} onSongClick={handleSongClick} />
+      {currentSong && <Playback audioSrc={currentSong.audio} currentSong={currentSong} />}
+      <PulsePlaylist />
+      <PulseTopArtists />
+    </div>
+  );
+};
 
 export default Explore;
