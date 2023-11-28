@@ -40,6 +40,7 @@ const Navigation = () => {
 
   return (
     <>
+    <div className='w-full h-24'></div>
       <nav
         id="header"
         className="fixed w-full z-30 top-0 text-white bg-gradient-to-r from-green-400  to-cyan-500"
@@ -110,9 +111,9 @@ const Navigation = () => {
                           <button className="block w-full text-left py-2 px-4 hover:bg-gray-200">
                             <FontAwesomeIcon icon={faCog} className="mr-2" /> Settings
                           </button>
-                          <button className="block w-full text-left py-2 px-4 hover:bg-gray-200">
+                          <Link to='/editProfile'><button className="block w-full text-left py-2 px-4 hover:bg-gray-200">
                             <FontAwesomeIcon icon={faEdit} className="mr-2" /> Edit Profile
-                          </button>
+                          </button></Link>
                           <button className="block w-full text-left py-2 px-4 hover:bg-gray-200">
                             <FontAwesomeIcon icon={faCreditCard} className="mr-2" /> Subscription
                           </button>

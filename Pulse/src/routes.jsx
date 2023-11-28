@@ -5,7 +5,7 @@ import NewsLetter from './pages/newsLetter';
 import RegistrationForm from './pages/registrationForm';
 import SignIn from './pages/signIn';
 import Contact from './pages/contact';
-
+import EditProfile from './pages/editProfile';
 
 export default function routes() {
 
@@ -20,6 +20,7 @@ export default function routes() {
         <Route path='/register' element={<RegistrationForm />} />
         <Route path='/signin' element={<SignIn />}/>
         <Route path='/contact' element={<Contact/>}/>
+        <Route path='/editProfile' element={<EditProfile />} />
       </Routes>
       
       </BrowserRouter>
