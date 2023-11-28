@@ -38,7 +38,7 @@ const RowCarouselArtist = ({ items }) => {
   return (
     <Slider {...settings}>
       {items.map((item) => (
-        <div key={item.id} className="px-2">
+        <div key={item.id} className="px-4">
           <ArtistCard key={item.id} {...item} onClick={() => console.log(`Play ${item.title}`)} />
         </div>
       ))}

@@ -3,24 +3,26 @@ import { useState } from 'react';
 const SearchBar = ({ onSearch }) => {
   const [searchTerm, setSearchTerm] = useState('');
 
-  const handleSearch = () => {
-    onSearch(searchTerm);
+  const handleChange = (e) => {
+    const newSearchTerm = e.target.value;
+    setSearchTerm(newSearchTerm);
+    onSearch(newSearchTerm);
   };
 
   return (
-    <div className="mb-4">
+    <div className="mb-8">
       <input
         type="text"
         placeholder="Search for a song or artist..."
         value={searchTerm}
-        onChange={(e) => setSearchTerm(e.target.value)}
-        className="p-2 border rounded-md"
+        onChange={handleChange}
+        className="p-2 border-none rounded-md transition-all duration-300 shadow-md bg-[#1A1A1A] bg-opacity-50 text-white"
       />
-      <button onClick={handleSearch} className="ml-2 bg-gray-800 text-white px-4 py-2 rounded-md">
-        Search
-      </button>
     </div>
   );
 };
 
 export default SearchBar;
+
+
+

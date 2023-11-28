@@ -72,7 +72,7 @@ const Explore = () => {
     };
 
     return (
-      <div className="p-[60px]">
+      <div className="pl-[60px] pr-[60px] pt-[30px]">
         <h2 className="text-[28px] pb-8 font-bold text-white">Browse all</h2>
 
         <SearchBar onSearch={handleSearch} />

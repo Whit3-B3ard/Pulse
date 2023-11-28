@@ -8,6 +8,7 @@ import SignIn from './pages/signIn';
 import Contact from './pages/contact';
 import Sidebar from './components/sidebar';
 import Explore from './pages/explore';
+import Playlist from './pages/playlist';
 
 export default function RoutesContainer() {
   
@@ -16,7 +17,7 @@ export default function RoutesContainer() {
       <Navigation />
       <div className="flex">
         <Sidebar />
-        <div className="flex-1 bg-gradient-to-b from-gray-900 to-black">
+        <div className="flex-1 bg-gradient-to-b from-[#1A1A1A] to-black">
           <Routes>
             <Route path="/" element={<App />} />
             <Route path="/newsLetter" element={<NewsLetter />} />
@@ -24,6 +25,7 @@ export default function RoutesContainer() {
             <Route path="/signin" element={<SignIn />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/explore" element={<Explore />} />
+            <Route path="/playlist" element={<Playlist />} />
           </Routes>
         </div>
       </div>

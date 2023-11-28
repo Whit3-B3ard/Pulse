@@ -12,9 +12,12 @@ const Sidebar = () => {
             </Link>
           </li>
           <li className="p-4">
-            <h2>Playlists</h2>
             <ul>
-              {/* placeholder for playlist create component */}
+             <li>
+              <Link to="/playlist" className="hover:text-gray-300">
+                My Playlist
+              </Link>
+             </li>
             </ul>
           </li>
           <li className="p-4">
