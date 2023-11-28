@@ -4,9 +4,12 @@ import Playback from '../components/playback';
 import PulsePlaylist from '../components/pulseMostListened';
 import PulseTopArtists from '../components/pulseTopArtists';
 import SearchBar from '../components/searchBar';
+import SmoothHoverEffect from '../framer_motion/smoothHover';
+import FadeInAndOut from '../framer_motion/fadeInOut';
 
 const SongCard = ({ title, artist, year, image, onClick }) => {
     return (
+      <SmoothHoverEffect>
       <div className="flex flex-col">
         <div onClick={onClick} className="bg-gray-800 bg-opacity-[20%] rounded-[5px] overflow-hidden shadow-md w-[190px] p-[15px] cursor-pointer transition-transform transform hover:scale-105">
             <img src={image} alt={artist} className="w-full h-[150px] object-cover rounded-[5px]" />
@@ -38,6 +41,7 @@ const SongCard = ({ title, artist, year, image, onClick }) => {
           <p className="text-sm text-gray-600 mb-2">{`${artist} • ${year}`}</p>
         </blockquote>
       </div>
+      </SmoothHoverEffect>
     );
 };
 
@@ -72,6 +76,7 @@ const Explore = () => {
     };
 
     return (
+      <FadeInAndOut>
       <div className="pl-[60px] pr-[60px] pt-[30px]">
         <h2 className="text-[28px] pb-8 font-bold text-white">Browse all</h2>
 
@@ -81,6 +86,7 @@ const Explore = () => {
         <PulsePlaylist />
         <PulseTopArtists />
       </div>
+      </FadeInAndOut>
     );
 };
 

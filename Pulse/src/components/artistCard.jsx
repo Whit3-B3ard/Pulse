@@ -1,5 +1,8 @@
+import SmoothHoverEffect from "../framer_motion/smoothHover";
+
 const ArtistCard = ({ title, image, onClick, followers }) => {
     return (
+        <SmoothHoverEffect>
         <div className="flex flex-col">
             <div className="relative overflow-hidden bg-gray-800 shadow-md cursor-pointer transition-transform transform hover:scale-105 rounded-full">
                 <img src={image} alt={title} className="w-full h-40 object-cover" />
@@ -33,6 +36,7 @@ const ArtistCard = ({ title, image, onClick, followers }) => {
             </div>
         </div>
         </div>
+        </SmoothHoverEffect>
     );
   };
   

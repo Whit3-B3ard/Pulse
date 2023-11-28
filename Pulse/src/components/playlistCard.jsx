@@ -1,5 +1,8 @@
+import SmoothHoverEffect from "../framer_motion/smoothHover";
+
 const Card = ({ title, image, onClick }) => {
   return (
+    <SmoothHoverEffect>
     <div className="relative overflow-hidden bg-[#1A1A1A] rounded-md shadow-md cursor-pointer transition-transform transform hover:scale-105">
       <img src={image} alt={title} className="w-full h-40 object-cover" />
       <div className="absolute inset-0 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity">
@@ -24,6 +27,7 @@ const Card = ({ title, image, onClick }) => {
         </button>
       </div>
     </div>
+    </SmoothHoverEffect>
   );
 };
 

@@ -9,6 +9,7 @@ import Contact from './pages/contact';
 import Sidebar from './components/sidebar';
 import Explore from './pages/explore';
 import Playlist from './pages/playlist';
+import PlaylistFeatured from './pages/playlistFeatured';
 
 export default function RoutesContainer() {
   
@@ -26,6 +27,10 @@ export default function RoutesContainer() {
             <Route path="/contact" element={<Contact />} />
             <Route path="/explore" element={<Explore />} />
             <Route path="/playlist" element={<Playlist />} />
+
+            <Route path="/mock" element={<PlaylistFeatured />} />
+
+            <Route path="/playlist/:playlistTitle" element={<PlaylistFeatured />} />
           </Routes>
         </div>
       </div>

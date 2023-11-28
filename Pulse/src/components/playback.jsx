@@ -41,7 +41,7 @@ const Playback = ({ audioSrc, currentSong }) => {
   console.log('currentSong:', currentSong);
 
   return (
-    <div className="fixed bottom-0 left-0 right-0 bg-[#1A1A1A] bg-opacity-50 text-white p-4 flex items-center justify-between z-50">
+    <div className="fixed bottom-0 left-0 right-0 bg-[#1A1A1A] bg-opacity-70 text-white p-4 flex items-center justify-between z-50">
     <div className="flex items-center">
       <img
         src={currentSong.image}
