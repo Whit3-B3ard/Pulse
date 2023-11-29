@@ -1,10 +1,10 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCompass, faUsers, faCompactDisc,  faSignInAlt, faUserPlus,faMusic, faList, faPlusCircle } from '@fortawesome/free-solid-svg-icons';
+import { faCompass, faUsers, faCompactDisc,   faMusic, faList, faPlusCircle } from '@fortawesome/free-solid-svg-icons';
 import { Link } from 'react-router-dom';
 
 const Sidebar = () => {
   return (
-    <div className="sidebar bg-gray-800 bg-opacity-20 h-screen text-white w-1/6">
+    <div className="sidebar bg-gray-800 bg-opacity-[20%] h-screen text-white w-1/6">
       <nav>
         <ul>
           <li className="p-4">
@@ -47,24 +47,9 @@ const Sidebar = () => {
               </li>
             </ul>
           </li>
-          {/* <li className="p-4">
-            <Link to="/signin" className="hover:text-gray-300">
-            <FontAwesomeIcon icon={faSignInAlt} className="mr-2" />
-              Sign In
-            </Link>
-          </li>
-          <li className="p-4">
-            <Link to="/register" className="hover:text-gray-300">
-            <FontAwesomeIcon icon={faUserPlus} className="mr-2" />
-              Register
-            </Link>
-          </li>
-          <li>
-            <Link to="/mock" className="hover:text-gray-300">
-              Mock
-            </Link>
-          </li> */}
+         
         </ul>
+      
       </nav>
     </div>
   );

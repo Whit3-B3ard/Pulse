@@ -12,7 +12,7 @@ export default function EitProfile() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Add logic to handle form submission, e.g., send data to server
+    
     console.log('Form submitted:', {
       username,
       email,
@@ -38,7 +38,7 @@ export default function EitProfile() {
       
     <h1 className='font-mono font-bold text-5xl'>Edit Profile</h1>
     <form onSubmit={handleSubmit} className='w-2/6 h-full'>
-      {/* Username */}
+      
       <div className='mb-4 flex flex-col'>
         <label className='mb-2' htmlFor='username'>Username:</label>
         <input
@@ -51,7 +51,7 @@ export default function EitProfile() {
         />
       </div>
 
-      {/* Email */}
+      
       <div className='mb-4 flex flex-col'>
         <label className='mb-2' htmlFor='email'>Email:</label>
         <input
@@ -64,7 +64,7 @@ export default function EitProfile() {
         />
       </div>
 
-      {/* Password */}
+      
       <div className='mb-4 flex flex-col'>
         <label className='mb-2' htmlFor='password'>Password:</label>
         <input
@@ -77,7 +77,7 @@ export default function EitProfile() {
         />
       </div>
 
-      {/* Gender */}
+      
       <div className='mb-4 flex flex-col'>
         <label className='mb-2' htmlFor='gender'>Gender:</label>
         <input
@@ -89,7 +89,7 @@ export default function EitProfile() {
         />
       </div>
 
-      {/* Birthdate */}
+      
       <div className='mb-4 flex flex-col'>
         <label className='mb-2' htmlFor='birthdate'>Birthdate (DD/MM/YY):</label>
         <input
@@ -101,7 +101,7 @@ export default function EitProfile() {
         />
       </div>
 
-      {/* Country */}
+      
       <div className='mb-4 flex flex-col'>
         <label className='mb-2' htmlFor='country'>Country or Region:</label>
         <input
@@ -113,7 +113,7 @@ export default function EitProfile() {
         />
       </div>
 
-      {/* Checkbox for sharing information */}
+     
       <div className='mb-4 '>
         <input
           type='checkbox'
@@ -127,7 +127,7 @@ export default function EitProfile() {
         </label>
       </div>
 
-      {/* Submit button */}
+      
       <button type='submit' className='bg-blue-500 text-white py-2 px-4 rounded'>
         Save Changes
       </button>

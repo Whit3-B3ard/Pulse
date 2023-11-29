@@ -1,24 +1,21 @@
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import App from "./App";
+import Navigation from "./components/navigation";
+import NewsLetter from "./pages/newsLetter";
+import RegistrationForm from "./pages/registrationForm";
+import SignIn from "./pages/signIn";
+import Contact from "./pages/contact";
+import Sidebar from "./components/sidebar";
+import Explore from "./pages/explore";
+import Playlist from "./pages/playlist";
+import PlaylistFeatured from "./pages/playlistFeatured";
+import EditProfile from './pages/editProfile'
 
-import App from './App';
-import Navigation from './components/navigation';
-import NewsLetter from './pages/newsLetter';
-import RegistrationForm from './pages/registrationForm';
-import SignIn from './pages/signIn';
-import Contact from './pages/contact';
-import Sidebar from './components/sidebar';
-import Explore from './pages/explore';
-import Playlist from './pages/playlist';
-import PlaylistFeatured from './pages/playlistFeatured';
-import EditProfile from './pages/editProfile';
-
-export default function routes() {
-
-
+const RoutesContainer = () => {
   return (
     <BrowserRouter>
       <Navigation />
-      <div className="flex">
+      <div className="flex bg-gray-800 bg-opacity-[20%]">
         <Sidebar />
         <div className="flex-1 bg-gradient-to-b from-[#1A1A1A] to-black">
           <Routes>
@@ -29,13 +26,14 @@ export default function routes() {
             <Route path="/contact" element={<Contact />} />
             <Route path="/explore" element={<Explore />} />
             <Route path="/playlist" element={<Playlist />} />
-
-            <Route path="/mock" element={<PlaylistFeatured />} />
-
-            <Route path="/playlist/:playlistTitle" element={<PlaylistFeatured />} />
+            <Route path="/playlistF/:id" element={<PlaylistFeatured />} />
+            <Route path="/editProfile" element={<EditProfile />} />
           </Routes>
         </div>
       </div>
     </BrowserRouter>
   );
-}
+};
+
+export default RoutesContainer;
+

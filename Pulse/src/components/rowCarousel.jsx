@@ -1,7 +1,5 @@
-
 import Card from './playlistCard';
 import Slider from 'react-slick';
-import { Link } from 'react-router-dom';
 
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
@@ -39,15 +37,16 @@ const RowCarousel = ({ items }) => {
   return (
     <Slider {...settings}>
       {items.map((item) => (
-        <Link to={`/playlist/${item.title}`} key={item.id} className="px-2">
-          <Card title={item.title} image={item.image} />
-        </Link>
+        <div key={item.id} className="px-2">
+          <Card title={item.title} image={item.image} id={item.id} />
+        </div>
       ))}
     </Slider>
   );
 };
 
 export default RowCarousel;
+
 
 
 
