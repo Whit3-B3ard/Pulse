@@ -40,7 +40,7 @@ const Sidebar = () => {
                 </Link>
               </li>
               <li className="p-4">
-                <Link to="/createplaylist" className="hover:text-gray-300">
+                <Link to="/" className="hover:text-gray-300">
                   <FontAwesomeIcon icon={faPlusCircle} className="mr-2" />
                   Create a playlist
                 </Link>
