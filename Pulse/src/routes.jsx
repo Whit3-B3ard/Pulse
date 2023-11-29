@@ -10,9 +10,11 @@ import Sidebar from './components/sidebar';
 import Explore from './pages/explore';
 import Playlist from './pages/playlist';
 import PlaylistFeatured from './pages/playlistFeatured';
+import EditProfile from './pages/editProfile';
 
-export default function RoutesContainer() {
-  
+export default function routes() {
+
+
   return (
     <BrowserRouter>
       <Navigation />
