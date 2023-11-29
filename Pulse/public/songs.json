@@ -1,0 +1,61 @@
+[
+    {
+        "id": 1,
+        "title": "I Rein For Rein",
+        "artist": "Mystery Girl",
+        "year": "1985",
+        "genre": "city pop",
+        "image": "/Mystery_girl.jpg",
+        "audio": "/I Rein For Rein - Mystery Girl (1985).m4a",
+        "duration": "04:10",
+        "album": "フォロー"
+    },
+
+    {
+        "id": 2,
+        "title": "Lazy Dance",
+        "artist": "Yoko Oginome",
+        "year": "1986",
+        "genre": "city pop",
+        "image": "/yoko_oginome.jpg",
+        "audio": "/LAZY DANCE.m4a",
+        "duration": "04:32",
+        "album": "Raspberry Wind"
+    },
+
+    {
+        "id": 3,
+        "title": "Plastic Love",
+        "artist": "Mariya Takeuchi",
+        "year": "1984",
+        "genre": "city pop",
+        "image": "/mariya_takeuchi.jpg",
+        "audio": "/Mariya Takeuchi_Plastic Love.mp3",
+        "duration": "04:28",
+        "album": "Variety"
+    },
+
+    {
+        "id": 4,
+        "title": "Sparkle",
+        "artist": "Tatsuro Yamashita",
+        "year": "1982",
+        "genre": "city pop",
+        "image": "/tatsuro_yamashita.jpg",
+        "audio": "/Tatsuro Yamashita - Sparkle (1982) (Urusei Yatsura).m4a",
+        "duration": "04:15",
+        "album": "For You"
+    },
+
+    {
+        "id": 5,
+        "title": "ジンクスは信じない",
+        "artist": "Mami Ayukava",
+        "year": "1983",
+        "genre": "city pop",
+        "image": "/mami_ayukava.jpg",
+        "audio": "/ジンクスは信じない.m4a",
+        "duration": "04:22",
+        "album": "Chase"
+    }
+]
