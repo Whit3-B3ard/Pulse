@@ -1,8 +1,4 @@
-# React + Vite
+# Notice: 
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- install `npm install react-slick slick-carousel` in order for the Slider to work
+- don't forget to update your npm node modules `npm update` or `npm update package-name` <br /> or if you want all the latest versions of the packages `npm update --save`
