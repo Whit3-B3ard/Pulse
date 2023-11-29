@@ -9,12 +9,13 @@ import Sidebar from "./components/sidebar";
 import Explore from "./pages/explore";
 import Playlist from "./pages/playlist";
 import PlaylistFeatured from "./pages/playlistFeatured";
+import EditProfile from './pages/editProfile'
 
 const RoutesContainer = () => {
   return (
     <BrowserRouter>
       <Navigation />
-      <div className="flex">
+      <div className="flex bg-gray-800 bg-opacity-[20%]">
         <Sidebar />
         <div className="flex-1 bg-gradient-to-b from-[#1A1A1A] to-black">
           <Routes>
@@ -26,6 +27,7 @@ const RoutesContainer = () => {
             <Route path="/explore" element={<Explore />} />
             <Route path="/playlist" element={<Playlist />} />
             <Route path="/playlistF/:id" element={<PlaylistFeatured />} />
+            <Route path="/editProfile" element={<EditProfile />} />
           </Routes>
         </div>
       </div>
