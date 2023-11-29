@@ -18,7 +18,7 @@ export default function routes() {
   return (
     <BrowserRouter>
       <Navigation />
-      <div className="flex">
+      <div className="flex bg-gray-800 bg-opacity-[20%]">
         <Sidebar />
         <div className="flex-1 bg-gradient-to-b from-[#1A1A1A] to-black">
           <Routes>
@@ -29,7 +29,7 @@ export default function routes() {
             <Route path="/contact" element={<Contact />} />
             <Route path="/explore" element={<Explore />} />
             <Route path="/playlist" element={<Playlist />} />
-
+            <Route path="/editProfile" element={<EditProfile />} />
             <Route path="/mock" element={<PlaylistFeatured />} />
 
             <Route path="/playlist/:playlistTitle" element={<PlaylistFeatured />} />

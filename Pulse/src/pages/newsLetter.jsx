@@ -22,16 +22,11 @@ const NewsLetter = () => {
   }, [subscriptions]);
 
   return (
-    <div className="flex w-screen h-screen flex-col bg-gray-950">
-      <div className="flex w-screen h-screen flex-col bg-black">
-      <div className="w-full h-full bg-black flex">
+    <div className="flex w-full h-full flex-col bg-black">
+      
     <div className='flex justify-start flex-1'>
         <img src="https://img.freepik.com/free-vector/silhouettes-people-dancing-glittery-background_1048-17649.jpg" className="h-full" alt="" />
     </div>
-    
-</div>
-
-</div>
 
     <div className='flex absolute z-10 inset-0 items-center'>
       <div className="max-w-md mx-auto bg-transparent rounded-lg p-6  border h-96 pt-12 ">
