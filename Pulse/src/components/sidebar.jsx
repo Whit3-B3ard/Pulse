@@ -24,11 +24,6 @@ const Sidebar = () => {
             {/* placeholder for playlist create component */}
           </li>
         </ul>
-        <li>
-          <Link to="/mock">
-            Mock
-          </Link>
-        </li>
       </nav>
     </div>
   );

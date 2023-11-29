@@ -1,82 +1,82 @@
 [
     { 
         "id": 1, 
-        "title": "chill_lounge", 
+        "title": "Chill lounge", 
         "image": "/cards/chill_lounge.jpg" 
     },
     { 
         "id": 2, 
-        "title": "classic_pop", 
+        "title": "Classic pop", 
         "image": "/cards/classic.jpg" 
     },
     { 
         "id": 3, 
-        "title": "cyber_funk", 
+        "title": "Cyber funk", 
         "image": "/cards/cyber.jpg" 
     },
     { 
         "id": 4, 
-        "title": "happy_vibes", 
+        "title": "Happy vibes", 
         "image": "/cards/happyvibes.jpg" 
     },
     { 
         "id": 5, 
-        "title": "tiktok", 
+        "title": "Tiktok", 
         "image": "/cards/tiktok.jpg" 
     },
     { 
         "id": 6, 
-        "title": "doves", 
+        "title": "Doves", 
         "image": "/cards/doves.jpg" 
     },
     { 
         "id": 7, 
-        "title": "tropical", 
+        "title": "Tropical", 
         "image": "/cards/tropical.jpg" 
     },
     { 
         "id": 8, 
-        "title": "more_chill", 
+        "title": "More chill", 
         "image": "/cards/more_chill.jpg" 
     },
     { 
         "id": 1, 
-        "title": "chill_lounge", 
+        "title": "Chill lounge", 
         "image": "/cards/chill_lounge.jpg" 
     },
     { 
         "id": 2, 
-        "title": "classic_pop", 
+        "title": "Classic pop", 
         "image": "/cards/classic.jpg" 
     },
     { 
         "id": 3, 
-        "title": "cyber_funk", 
+        "title": "Cyber funk", 
         "image": "/cards/cyber.jpg" 
     },
     { 
         "id": 4, 
-        "title": "happy_vibes", 
+        "title": "Happy vibes", 
         "image": "/cards/happyvibes.jpg" 
     },
     { 
         "id": 5, 
-        "title": "tiktok", 
+        "title": "Tiktok", 
         "image": "/cards/tiktok.jpg"
     },
     { 
         "id": 6, 
-        "title": "doves", 
+        "title": "Doves", 
         "image": "/cards/doves.jpg" 
     },
     { 
         "id": 7, 
-        "title": "tropical", 
+        "title": "Tropical", 
         "image": "/cards/tropical.jpg" 
     },
     { 
         "id": 8, 
-        "title": "more_chill", 
+        "title": "More chill", 
         "image": "/cards/more_chill.jpg" 
     }
 ]

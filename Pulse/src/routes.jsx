@@ -1,18 +1,16 @@
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import App from "./App";
+import Navigation from "./components/navigation";
+import NewsLetter from "./pages/newsLetter";
+import RegistrationForm from "./pages/registrationForm";
+import SignIn from "./pages/signIn";
+import Contact from "./pages/contact";
+import Sidebar from "./components/sidebar";
+import Explore from "./pages/explore";
+import Playlist from "./pages/playlist";
+import PlaylistFeatured from "./pages/playlistFeatured";
 
-import App from './App';
-import Navigation from './components/navigation';
-import NewsLetter from './pages/newsLetter';
-import RegistrationForm from './pages/registrationForm';
-import SignIn from './pages/signIn';
-import Contact from './pages/contact';
-import Sidebar from './components/sidebar';
-import Explore from './pages/explore';
-import Playlist from './pages/playlist';
-import PlaylistFeatured from './pages/playlistFeatured';
-
-export default function RoutesContainer() {
-  
+const RoutesContainer = () => {
   return (
     <BrowserRouter>
       <Navigation />
@@ -27,13 +25,13 @@ export default function RoutesContainer() {
             <Route path="/contact" element={<Contact />} />
             <Route path="/explore" element={<Explore />} />
             <Route path="/playlist" element={<Playlist />} />
-
-            <Route path="/mock" element={<PlaylistFeatured />} />
-
-            <Route path="/playlist/:playlistTitle" element={<PlaylistFeatured />} />
+            <Route path="/playlistF/:id" element={<PlaylistFeatured />} />
           </Routes>
         </div>
       </div>
     </BrowserRouter>
   );
-}
+};
+
+export default RoutesContainer;
+
