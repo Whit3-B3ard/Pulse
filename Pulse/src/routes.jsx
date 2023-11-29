@@ -10,6 +10,8 @@ import Explore from "./pages/explore";
 import Playlist from "./pages/playlist";
 import PlaylistFeatured from "./pages/playlistFeatured";
 import EditProfile from './pages/editProfile'
+import Genres from "./pages/genres";
+// import Artist from "./components/Artist";
 
 const RoutesContainer = () => {
   return (
@@ -28,6 +30,7 @@ const RoutesContainer = () => {
             <Route path="/playlist" element={<Playlist />} />
             <Route path="/playlistF/:id" element={<PlaylistFeatured />} />
             <Route path="/editProfile" element={<EditProfile />} />
+            <Route path="/genres" element={<Genres />} />
           </Routes>
         </div>
       </div>
