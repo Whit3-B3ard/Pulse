@@ -24,27 +24,24 @@ const NewsLetter = () => {
   return (
     <div className="flex w-screen h-screen flex-col bg-gray-950">
       <div className="flex w-screen h-screen flex-col bg-black">
-      <div className="w-full h-2/4 bg-black flex">
-    <div className='flex justify-center flex-1'>
+      <div className="w-full h-full bg-black flex">
+    <div className='flex justify-start flex-1'>
         <img src="https://img.freepik.com/free-vector/silhouettes-people-dancing-glittery-background_1048-17649.jpg" className="h-full" alt="" />
     </div>
-    <div className='flex justify-end flex-1 relative'>
-        <img src="https://c4.wallpaperflare.com/wallpaper/692/778/500/heartbeat-minimalism-lines-pulse-wallpaper-preview.jpg" className="h-full" alt="" />
-        <div className="absolute inset-0 bg-black opacity-40"></div>
-    </div>
+    
 </div>
 
 </div>
 
     <div className='flex absolute z-10 inset-0 items-center'>
-      <div className="max-w-md mx-auto bg-white rounded-lg p-6 shadow-xl h-96 pt-12 ">
+      <div className="max-w-md mx-auto bg-transparent rounded-lg p-6  border h-96 pt-12 ">
         
-        <h2 className="text-2xl font-semibold mb-4">Subscribe to Our Newsletter</h2>
-        <p className="text-gray-600 mb-6">Stay updated with our latest Songs and Albums.</p>
+        <h2 className="text-2xl font-mono font-bold text-white mb-4">Subscribe to Our Newsletter</h2>
+        <p className="text-white mb-6">Stay updated with our latest Songs and Albums.</p>
 
         <form action="#" method="POST" className="space-y-4">
           <div className="flex flex-col">
-            <label htmlFor="email" className="text-sm font-semibold text-gray-600 mb-1">Email Address</label>
+            <label htmlFor="email" className="text-sm font-semibold text-white mb-1">Email Address</label>
             <input
               type="email"
               id="email"
@@ -66,7 +63,7 @@ const NewsLetter = () => {
               checked={subscribe}
               onChange={() => setSubscribe(!subscribe)}
             />
-            <label htmlFor="subscribe" className="ml-2 text-gray-600">Subscribe to weekly newsletter</label>
+            <label htmlFor="subscribe" className="ml-2 text-white">Subscribe to weekly newsletter</label>
           </div>
 
           <button type="button" onClick={handleSubscribe} className="bg-blue-500 text-white font-semibold py-2 px-4 rounded hover:bg-blue-600 transition duration-300">Subscribe</button>
