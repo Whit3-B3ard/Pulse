@@ -40,7 +40,7 @@ const Navigation = () => {
 
   return (
     <>
-    <div className='w-full h-24'></div>
+    
       <nav
         id="header"
         className="w-full z-30 top-0 text-white bg-gradient-to-r from-green-400  to-cyan-500"
@@ -53,7 +53,9 @@ const Navigation = () => {
 
 
               </div>
+              <div>
               Pulse
+              </div>
             </Link>
           </div>
           <div className="block lg:hidden pr-4">
