@@ -39,7 +39,7 @@ const Navigation = () => {
 
 
   return (
-    <>
+    <nav className='fixed z-30 w-full'>
     
       <nav
         id="header"
@@ -165,7 +165,7 @@ const Navigation = () => {
         </div>
         <hr className="border-b border-gray-100 opacity-25 my-0 py-0" />
       </nav>
-    </>
+    </nav>
   );
 };
 
