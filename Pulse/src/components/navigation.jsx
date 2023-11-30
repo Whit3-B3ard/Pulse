@@ -1,7 +1,8 @@
 import React, { useContext, useState, useEffect, useRef } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { UserContext } from '../context/UserContext';
-
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faUser, faCog, faEdit, faCreditCard, faHeart } from '@fortawesome/free-solid-svg-icons';
 
 
 const Navigation = () => {
