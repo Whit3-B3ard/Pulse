@@ -19,7 +19,7 @@ const PulsePlaylist = () => {
   }, []);
 
   return (
-    <div className="container mx-auto mt-8">
+    <div className="container mx-auto mt-8 md:block">
       <h1 className="text-2xl font-bold mb-4 text-white">Featured Playlists</h1>
       <RowCarousel items={playlistItems} />
     </div>

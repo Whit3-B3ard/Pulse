@@ -32,7 +32,6 @@ export default function MainLayout() {
           <Route path="/explore" element={<Explore />} />
           <Route path="/playlist" element={<Playlist />} />
           <Route path="/editProfile" element={<EditProfile />} />
-          <Route path="/mock" element={<PlaylistFeatured />} />
           <Route path="/playlistF/:id" element={<PlaylistFeatured />} />
           <Route path="/genres" element={<Genres />} />
         </Routes>

@@ -77,7 +77,7 @@ const Explore = () => {
 
     return (
       <FadeInAndOut>
-      <div className="pl-[60px] pr-[60px] pt-[30px]">
+      <div className="pl-[60px] pr-[60px] pt-[30px] mt-20">
         <h2 className="text-[28px] pb-8 font-bold text-white">Browse all</h2>
 
         <SearchBar onSearch={handleSearch} />

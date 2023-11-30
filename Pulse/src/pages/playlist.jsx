@@ -1,59 +1,74 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import CreatePlaylist from '../components/playlist/CreatePlaylist';
+import PlaylistDisplay from '../components/playlist/PlaylistDisplay';
+import AddSongToPlaylist from '../components/playlist/AddSongToPlaylist';
 
-const Playlist = () => {
-  const [newPlaylistName, setNewPlaylistName] = useState('');
+const CreatePlaylistPage = () => {
   const [playlists, setPlaylists] = useState([]);
-  const [favorites, setFavorites] = useState([]);
+  const [selectedPlaylist, setSelectedPlaylist] = useState(null);
 
-  const handleCreatePlaylist = () => {
-    if (newPlaylistName.trim() !== '') {
-      setPlaylists((prevPlaylists) => [...prevPlaylists, newPlaylistName]);
-      setNewPlaylistName('');
+  useEffect(() => {
+    const storedPlaylists = JSON.parse(localStorage.getItem('playlists')) || [];
+    setPlaylists(storedPlaylists);
+  }, []);
+
+  const savePlaylistsToLocalStorage = (updatedPlaylists) => {
+    localStorage.setItem('playlists', JSON.stringify(updatedPlaylists));
+  };
+
+  const handlePlaylistCreate = (playlistName) => {
+    const updatedPlaylists = [...playlists, { name: playlistName, songs: [] }];
+    setPlaylists(updatedPlaylists);
+    savePlaylistsToLocalStorage(updatedPlaylists);
+  };
+
+  const handlePlaylistSelect = (playlist) => {
+    setSelectedPlaylist(playlist);
+  };
+
+  const handleAddSongToPlaylist = (song) => {
+    if (selectedPlaylist) {
+      const updatedPlaylists = playlists.map((playlist) =>
+        playlist === selectedPlaylist
+          ? { ...playlist, songs: [...playlist.songs, song] }
+          : playlist
+      );
+      setPlaylists(updatedPlaylists);
+      savePlaylistsToLocalStorage(updatedPlaylists);
+    }
+  };
+
+  const handleDeletePlaylist = (playlistName) => {
+    const updatedPlaylists = playlists.filter((playlist) => playlist.name !== playlistName);
+    setPlaylists(updatedPlaylists);
+    savePlaylistsToLocalStorage(updatedPlaylists);
+
+    if (selectedPlaylist && selectedPlaylist.name === playlistName) {
+      setSelectedPlaylist(null);
     }
   };
 
   return (
-    <div className="max-w-lg mx-auto p-8 text-white">
-      <h2 className="text-2xl font-bold mb-4">My Playlists</h2>
+    <div className="pl-[60px] pr-[60px] pt-[30px] mt-28">
+      <h2 className="text-[48px] pb-8 font-bold text-white">My Playlists</h2>
 
-      {/* View existing playlists */}
-      <ul className="mb-4">
-        {playlists.map((playlist, index) => (
-          <li key={index} className="text-gray-700">{playlist}</li>
-        ))}
-      </ul>
+      <CreatePlaylist onPlaylistCreate={handlePlaylistCreate} />
 
-      {/* Create a new playlist */}
-      <div className="flex items-center space-x-4">
-        <input
-          type="text"
-          placeholder="New Playlist Name"
-          value={newPlaylistName}
-          onChange={(e) => setNewPlaylistName(e.target.value)}
-          className="p-2 flex-1 border-none rounded-md transition-all duration-300 shadow-md bg-[#1A1A1A] bg-opacity-50 text-white"
-        />
-        <button
-          onClick={handleCreatePlaylist}
-          className="bg-blue-500 text-white px-4 py-2 rounded-md"
-        >
-          Create Playlist
-        </button>
+      <div className="flex gap-4">
+        <PlaylistDisplay playlists={playlists} onSelect={handlePlaylistSelect} onDelete={handleDeletePlaylist} />
+        {selectedPlaylist && (
+          <AddSongToPlaylist
+            selectedPlaylist={selectedPlaylist}
+            onAddSong={handleAddSongToPlaylist}
+          />
+        )}
       </div>
-
-      {/* Favorites section */}
-      <h2 className="text-2xl font-bold my-4">Favorites</h2>
-
-      {/* View favorite items */}
-      <ul>
-        {favorites.map((favorite, index) => (
-          <li key={index} className="text-gray-700">{favorite}</li>
-        ))}
-      </ul>
     </div>
   );
 };
 
-export default Playlist;
+export default CreatePlaylistPage;
+
 
 
 
