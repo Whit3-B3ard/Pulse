@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { CardItem } from "../components/card/CardItem";
-import { Header } from "../components/genre/header";
+import { Header } from "../components/genre/Header";
 import { List } from "../components/genre/List";
 import FadeInAndOut from "../framer_motion/fadeInOut";
 import ApiClient from "../utils/apiEndpoints/ApiClient";
@@ -21,7 +21,9 @@ const Genres = () => {
       }
     };
     getGenresData();
+
   }, []);
+  console.log("genre is running")
   return (
     <FadeInAndOut>
       {genre && (

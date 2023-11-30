@@ -11,6 +11,7 @@ import Explore from '../pages/explore';
 import Playlist from '../pages/playlist';
 import PlaylistFeatured from '../pages/playlistFeatured';
 import EditProfile from '../pages/editProfile';
+import Genres from '../pages/genres';
 
 export default function MainLayout() {
   const location = useLocation();
@@ -32,7 +33,8 @@ export default function MainLayout() {
           <Route path="/playlist" element={<Playlist />} />
           <Route path="/editProfile" element={<EditProfile />} />
           <Route path="/mock" element={<PlaylistFeatured />} />
-          <Route path="/playlist/:playlistTitle" element={<PlaylistFeatured />} />
+          <Route path="/playlistF/:id" element={<PlaylistFeatured />} />
+          <Route path="/genres" element={<Genres />} />
         </Routes>
       </div>
     </div>
