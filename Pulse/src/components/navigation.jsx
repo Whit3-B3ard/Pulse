@@ -46,14 +46,14 @@ const Navigation = () => {
         className="w-full z-30 top-0 text-white bg-gradient-to-r from-green-400  to-cyan-500"
       >
         <div className="w-full container mx-auto flex flex-wrap items-center justify-between mt-0 py-2">
-          <div className="pl-4 flex items-center">
+          <div className="flex items-center">
+
             <Link to="/" className="toggleColour text-white no-underline hover:no-underline font-bold text-2xl lg:text-4xl flex">
-              <div className="mr-4 absolute left-36 top-1">
-                <img src="https://static.vecteezy.com/system/resources/previews/015/309/651/non_2x/heart-rate-pulse-on-transparent-background-free-png.png" alt="" className="h-16 w-16" />
-
-
+              <div className="mr-2">
+                <img src="https://static.vecteezy.com/system/resources/previews/015/309/651/non_2x/heart-rate-pulse-on-transparent-background-free-png.png" alt="logo" className="h-14 w-14" />
               </div>
-              <div>
+
+              <div className="pt-2">
               Pulse
               </div>
             </Link>
