@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 const Sidebar = () => {
   return (
-    <div className="sidebar bg-gray-800 bg-opacity-[20%] h-screen text-white w-1/6">
+    <div className="sidebar bg-gray-800 bg-opacity-[20%] h-screen text-white w-1/6 pt-28">
       <nav>
         <ul>
           <li className="p-4">
