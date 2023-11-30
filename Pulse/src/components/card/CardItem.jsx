@@ -1,16 +1,11 @@
-import SmoothHoverEffect from "../framer_motion/smoothHover";
-import { Link } from "react-router-dom";
 
-const Card = ({ title, image, onClick, id }) => {
-  const handleClick = () => {
-    if (onClick) {
-      onClick();
-    }
-  };
+import SmoothHoverEffect from '../../framer_motion/smoothHover'
 
+export const CardItem = ({title, image}) => {
+    const handleClick = () => {}
   return (
     <SmoothHoverEffect>
-      <Link to={`/playlistF/${id}`}>
+      <div onClick={()=>{}}>
         <div className="relative overflow-hidden bg-[#1A1A1A] rounded-md shadow-md cursor-pointer transition-transform transform hover:scale-105">
           <img src={image} alt={title} className="w-full h-40 object-cover" />
           <div className="absolute inset-0 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity">
@@ -35,11 +30,7 @@ const Card = ({ title, image, onClick, id }) => {
             </button>
           </div>
         </div>
-      </Link>
+      </div>
     </SmoothHoverEffect>
-  );
-};
-
-export default Card;
-
-
+  )
+}
