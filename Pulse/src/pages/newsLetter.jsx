@@ -22,11 +22,12 @@ const NewsLetter = () => {
   }, [subscriptions]);
 
   return (
+    
     <div className="flex w-screen h-screen flex-col bg-black">
-      
-    <div className='flex justify-start  flex-1'>
-        <img src="https://img.freepik.com/free-vector/silhouettes-people-dancing-glittery-background_1048-17649.jpg" className="h-full" alt="" />
-    </div>
+    <div className="w-full h-full  flex">
+    <img src="https://images.unsplash.com/photo-1501612780327-45045538702b?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" className= "w-full h-full" alt="" />
+  </div>  
+   
 
     <div className='flex absolute z-10 inset-0 items-center'>
       <div className="max-w-md mx-auto bg-transparent rounded-lg p-6  border h-96 pt-12  ">
